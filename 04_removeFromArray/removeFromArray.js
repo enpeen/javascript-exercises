@@ -1,16 +1,14 @@
 const removeFromArray = function(array, ...args) {
-    let argsArrayed = Array.from(args);
-
-    for (let argArrayed of argsArrayed) {
-        if (array.includes(argArrayed)) {
-            let itemIndex = array.indexOf(argArrayed);
+    for (let arg of args) {
+        if (array.includes(arg)) {
+            let itemIndex = array.indexOf(arg);
             delete array[itemIndex];
         }
     }
     
-    arrayFiltered = array.filter(function(number) {
-        if (number != undefined) {
-            return number;
+    let arrayFiltered = array.filter(function(member) {
+        if (member != undefined) {
+            return member;
         };
     });
 
