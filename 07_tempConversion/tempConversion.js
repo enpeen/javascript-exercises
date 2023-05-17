@@ -10,6 +10,11 @@ const convertToFahrenheit = function(celsius) {
     return +fahrenheit.toFixed(1);
 };
 
+
+/*
+return +celsius.toFixed(1); == return Math.round(celsius * 10) / 10;
+*/
+
 // Do not edit below this line
 module.exports = {
   convertToCelsius,
