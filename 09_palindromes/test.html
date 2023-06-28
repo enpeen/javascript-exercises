@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const palindromes = function (string) {
+            let result = false;
+            let array = string.split("");
+            console.log(array);
+            for (let i = 0; i < array.length; i++) {
+                if (array.includes("!") || array.includes(".")) {
+                    console.log(array.indexOf("!"));
+                    let start = array.indexOf("!");
+                    array.splice(start, 1);
+                    console.log(array);
+                }
+                if (array.includes(".")) {
+                    console.log(array.indexOf("."));
+                    let start = array.indexOf(".");
+                    array.splice(start, 1);
+                    console.log(array);
+                }
+                if (array.includes(" ")) {
+                    console.log(array.indexOf(" "));
+                    let start = array.indexOf(" ");
+                    array.splice(start, 1);
+                    console.log(array);
+                }
+                if (array.includes(",")) {
+                    console.log(array.indexOf(","));
+                    let start = array.indexOf(",");
+                    array.splice(start, 1);
+                    console.log(array);
+                }
+            }
+            console.log(array);
+            array = array.map(function(item) {
+                return item.toLowerCase();
+            });
+            console.log(array);
+            const arrayMapped = array.slice();
+            const arrayReversed = arrayMapped.reverse();
+            let counter = -1;
+            for (let i = 0; i < array.length; i++) {
+                if (arrayReversed[i] == array[i]) {
+                    counter++;
+                }
+            }
+            if (counter == array.length - 1) {
+                    result = true;
+                }
+            return result;
+        };
+
+        console.log(palindromes("A h.a!"));
+    </script>
+</body>
+</html>
