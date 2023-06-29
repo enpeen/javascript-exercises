@@ -1,5 +1,5 @@
 const fibonacci = function(member) {
-    if (member < 0) {
+    if (member < 0) {       // try to remake without array
         return "OOPS";
     }
     if (typeof(member) == "string") {
@@ -7,7 +7,9 @@ const fibonacci = function(member) {
     }
     if (member == 1 || member == 2) {
         return 1;
-    } 
+    } else if (member == 0) {
+        return 0;
+    }
     let array = [];
     let a;
     let b;
