@@ -1,6 +1,6 @@
 const palindromes = function (string) {
-    let result = false;
-    let array = string.split("");
+    let result = false;               //try to optimize it a little, use replace method than turn into an array
+    let array = string.split("");     
     for (let i = 0; i < array.length; i++) {
         if (array.includes("!") || array.includes(".")) {
             let start = array.indexOf("!");
