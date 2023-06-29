@@ -1,5 +1,5 @@
 const fibonacci = function(member) {
-    if (member < 0) {       // try to remake without array
+    if (member < 0) {       //  try to remake without array
         return "OOPS";
     }
     if (typeof(member) == "string") {
