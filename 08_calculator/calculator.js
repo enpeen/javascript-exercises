@@ -45,7 +45,6 @@ const factorial = function(a) {
     let result = a;
     if (result == 0) {
         result = 1;
-        return result;
     } else {
         for (let i = a - 1; i >= 2; i--) {
             result = result * i;
